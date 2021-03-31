@@ -226,7 +226,7 @@ li {
 }
 
 .fab {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 .fa-html5 {
@@ -303,27 +303,29 @@ li {
   width: 100%;
   margin: 5rem auto;
   display: grid;
-  gap: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
 }
 
 .demo-item {
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   border-radius: 10px;
   margin: 0 auto;
-  width: 90%;
+  width: 80vw;
   padding: 1rem;
-  border: 0.5px solid transparent;
-  border-radius: 5px;
-  overflow: hidden;
+  /* border: 0.5px solid transparent; */
+  /* border-radius: 5px; */
+  /* overflow: hidden; */
 }
 
 .demo-item img {
   transition: transform, 0.25s ease-in-out;
+  width: 100%;
 }
 
 .demo-item img:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
 }
 
 .contact {
@@ -338,20 +340,10 @@ li {
 
 @media (min-width: 768px) {
   .demo-container {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .demo-container .one {
-    grid-column: 1/7;
-    grid-row: 1;
-  }
-  .demo-container .two {
-    grid-column: 7/13;
-    grid-row: 1;
-  }
-  .demo-container .three {
-    grid-column: 4/10;
-    grid-row: 2;
+  .demo-item {
+    width: 40vw;
   }
 }
 
