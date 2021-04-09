@@ -12,7 +12,7 @@ https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-  overflow-x: hidden;
+  z-index: 0;
 }
 
 html {
@@ -21,6 +21,8 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--tertiary-color);
 }
 
 :root {
@@ -81,10 +83,21 @@ li {
 }
 
 /* Intro section */
+.intro {
+  background-image: linear-gradient(
+      to bottom,
+      rgb(29, 53, 87, 1),
+      rgb(29, 53, 87, 0.2)
+    ),
+    url(./pics/wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .menu-container {
-  background-color: var(--primary-color);
   width: 100%;
-  height: 10%;
+  height: 8.5%;
 }
 .menu {
   width: 100%;
@@ -110,6 +123,21 @@ li {
   background-color: transparent;
 }
 
+/* Menu activated */
+.menu-container.active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-bottom: 0.5px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+.menu.active a {
+  color: var(--primary-color);
+  z-index: 1000;
+}
+
+/* Menu ends */
+
 .intro-main-wrapper {
   width: 100%;
   height: 90%;
@@ -123,15 +151,15 @@ li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to bottom,
       rgb(29, 53, 87, 1),
       rgb(29, 53, 87, 0.2)
     ),
-    url(./pics/wallpaper.jpg);
-  background-position: center;
+    url(./pics/wallpaper.jpg); */
+  /* background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   color: var(--secondary-color);
 }
 
@@ -221,9 +249,14 @@ li {
   transition: 0.2s ease-in-out;
 }
 
-.btn-about:hover {
-  background-color: var(--primary-color);
+.about .button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
+
+/* .btn-about:hover {
+  background-color: var(--primary-color);
+} */
 
 .fab {
   font-size: 3.5rem;
@@ -312,16 +345,13 @@ li {
   line-height: 1.5;
   border-radius: 10px;
   margin: 0 auto;
-  width: 80vw;
+  width: 50%;
   padding: 1rem;
-  /* border: 0.5px solid transparent; */
-  /* border-radius: 5px; */
-  /* overflow: hidden; */
 }
 
 .demo-item img {
   transition: transform, 0.25s ease-in-out;
-  width: 100%;
+  width: 80%;
 }
 
 .demo-item img:hover {
@@ -393,6 +423,11 @@ li {
   margin-top: 1.5rem;
 }
 
+.contact button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 @media (min-width: 680px) {
   .contact input,
   .contact textarea {
@@ -421,6 +456,14 @@ footer {
   display: flex;
   width: 45vw;
   justify-content: space-around;
+}
+
+.footer-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-icon:hover {
+  transform: scale(1.15);
 }
 
 @media (min-width: 650px) {
