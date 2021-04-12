@@ -91,7 +91,7 @@ li {
       rgb(29, 53, 87, 1),
       rgb(29, 53, 87, 0.2)
     ),
-    url(./pics/wallpaper.jpg);
+    url(../pics/wallpaper.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -99,7 +99,8 @@ li {
 
 .menu-container {
   width: 100%;
-  height: 8.5%;
+  height: 8.5vh;
+  min-height: 8.5vh;
   transition: all 0.3s ease-in-out;
 }
 .menu {
@@ -127,13 +128,15 @@ li {
 }
 
 .menu li:hover {
-  border-color: var(--secondary-color);
+  border-color: var(--primary-color);
   background-color: transparent;
 }
 
 /* Menu activated */
 .menu-container.active {
   position: fixed;
+  height: 8.5vh;
+  min-height: 8.5vh;
   width: 100%;
   top: 0;
   background-color: var(--secondary-color);
@@ -147,7 +150,7 @@ li {
   transition: all 0.25s ease-in-out;
   padding: 0.5rem;
 }
-.menu.active li:hover {
+.menu.active li:hover:focus {
   border: 0.5px solid var(--auxiliary-color);
   border-radius: 0.5rem;
 }
