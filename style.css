@@ -91,7 +91,7 @@ li {
       rgb(29, 53, 87, 1),
       rgb(29, 53, 87, 0.2)
     ),
-    url(../pics/wallpaper.jpg);
+    url(./pics/wallpaper.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -197,7 +197,7 @@ li {
   color: var(--secondary-color);
 }
 
-@media (min-width: 620px) {
+@media screen and (min-width: 620px) {
   .intro h1 {
     font-size: 6rem;
   }
@@ -206,7 +206,7 @@ li {
   }
 }
 
-@media (min-width: 720px) {
+@media screen and (min-width: 720px) {
   .menu {
     position: relative;
     left: 40%;
@@ -312,7 +312,7 @@ li {
   color: #00d8ff;
 } */
 
-@media (min-width: 560px) {
+@media screen and (min-width: 560px) {
   .about-card {
     width: 70%;
     height: 65%;
@@ -328,7 +328,7 @@ li {
   }
 }
 
-@media (min-width: 1180px) {
+@media screen and (min-width: 1180px) {
   .about-card {
     width: 50%;
     height: 50%;
@@ -387,7 +387,7 @@ li {
   align-items: center;
 }
 
-@media (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .demo-title {
     margin-top: 10%;
   }
@@ -452,7 +452,7 @@ li {
   color: var(--primary-color);
 }
 
-@media (min-width: 680px) {
+@media screen and (min-width: 680px) {
   .contact input,
   .contact textarea {
     font-size: 16px;
@@ -490,7 +490,7 @@ footer {
   transform: scale(1.15);
 }
 
-@media (min-width: 650px) {
+@media screen and (min-width: 650px) {
   .footer-icons {
     width: 40vw;
   }
