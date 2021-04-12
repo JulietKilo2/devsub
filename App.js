@@ -6,11 +6,11 @@ window.addEventListener('scroll', function () {
     if (window.pageYOffset > 100) {
         menuContainer.classList.add('active')
         menu.classList.add('active')
-        scrollToTopBtn.classList.add('active')
+        scrollToTopBtn.classList.add('scroll-active')
     }
     else {
         menuContainer.classList.remove('active')
         menu.classList.remove('active')
-        scrollToTopBtn.classList.remove('active')
+        scrollToTopBtn.classList.remove('scroll-active')
     }
 })
