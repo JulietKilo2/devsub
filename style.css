@@ -78,10 +78,15 @@ li {
 /* Intro section */
 .intro {
   height: 100vh;
-  background-image: url(pics/wallpaper.jpg) !important;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(29, 53, 87, 0.55),
+      rgb(29, 53, 87, 0.1)
+    ),
+    url(pics/wallpaper.jpg) !important;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .menu-container {
