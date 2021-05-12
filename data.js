@@ -54,13 +54,13 @@ const data = [
         githubUrl: "https://github.com/JulietKilo2/tropicscape",
         url: "https://tropicscape.netlify.app/"
     },
-    {
-        id: 5,
-        title: "andrew kim",
-        desc: "A Photograph portfolio website of Andrew Kim.",
-        stacks: ["html", "css"],
-        imgPath: "./pics/andrewkim_preview.png",
-        githubUrl: "",
-        url: "https://andrewkim.netlify.app/"
-    },
+    // {
+    //     id: 5,
+    //     title: "andrew kim",
+    //     desc: "A Photograph portfolio website of Andrew Kim.",
+    //     stacks: ["html", "css"],
+    //     imgPath: "./pics/andrewkim_preview.png",
+    //     githubUrl: "",
+    //     url: "https://andrewkim.netlify.app/"
+    // },
 ]

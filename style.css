@@ -16,7 +16,8 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  font-size: 12px;
 }
 
 :root {
@@ -46,33 +47,13 @@ a {
   color: var(--secondary-color);
 }
 
-section {
-  width: 100vw;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
 li {
   overflow-y: hidden;
   font-weight: bold;
 }
 
-.button {
-  font-family: "Montserrat", sans-serif;
-  width: fit-content;
-  padding: 1rem 2rem;
-  border: none;
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: var(--secondary-color);
-  background-color: transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-  background-color: transparent;
+button {
+  text-transform: uppercase;
 }
 
 /* Intro section */
@@ -80,10 +61,10 @@ li {
   height: 100vh;
   background-image: linear-gradient(
       to bottom,
-      rgb(29, 53, 87, 0.55),
+      rgb(29, 53, 87, 1),
       rgb(29, 53, 87, 0.1)
     ),
-    url(pics/wallpaper.jpg) !important;
+    url(pics/wallpaper_green.jpg) !important;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
@@ -93,7 +74,6 @@ li {
   width: 100%;
   height: 8.5vh;
   min-height: 8.5vh;
-  /* transition: all 0.3s ease-in-out; */
 }
 .menu {
   width: 100%;
@@ -174,18 +154,23 @@ li {
   bottom: 5.45rem;
 }
 
-.btn-intro {
-  position: relative;
-  margin-top: 1rem;
-  bottom: 5rem;
+.intro-button {
+  font-family: "Montserrat", sans-serif;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border: none;
   border-style: solid;
   border-width: 0.5px;
   border-color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  font-size: 2rem;
 }
 
-.button:hover {
+.intro-button:hover {
   background-color: var(--tertiary-color);
-  color: var(--secondary-color);
+  /* background-color: var(--primary-color); */
 }
 
 @media screen and (min-width: 620px) {
@@ -246,19 +231,25 @@ li {
   justify-content: space-between;
 }
 
-.about .button {
+.about-button {
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem 2rem;
+  border: none;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: var(--secondary-color);
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.25s, ease-in-out;
   margin-top: 3rem;
-  transition: 0.2s ease-in-out;
+  font-size: 2rem;
 }
 
-.about .button:hover {
+.about-button:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
-
-/* .btn-about:hover {
-  background-color: var(--primary-color);
-} */
 
 .fab {
   font-size: 3.5rem;
@@ -282,26 +273,6 @@ li {
 .fa-react {
   color: #00d8ff;
 }
-
-/* 
-.fa-html5:hover {
-  color: #e34f26;
-}
-.fa-css3-alt:hover {
-  color: #2965f1;
-}
-.fa-js:hover {
-  color: #f7df1e;
-}
-.fa-sass:hover {
-  color: #c69;
-}
-.fa-git:hover {
-  color: #f34f29;
-}
-.fa-react:hover {
-  color: #00d8ff;
-} */
 
 @media screen and (min-width: 560px) {
   .about-card {
@@ -331,69 +302,154 @@ li {
   visibility: hidden;
 }
 
-.demo-title {
-  margin-top: 25%;
+.projects-title {
+  margin-top: 10%;
 }
 
 .projects {
   color: var(--secondary-color);
-  background-color: var(--primary-color);
-  text-align: center;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.demo-container {
-  width: 100%;
-  margin: 5rem auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2.5rem;
+.projects-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
-.demo-item {
-  text-align: center;
-  line-height: 1.5;
+.project {
+  width: 90%;
+  margin-top: 3rem;
+  border: 1px solid transparent;
   border-radius: 10px;
-  margin: 0 auto;
-  width: 80%;
   padding: 1rem;
+  line-height: 1.5;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
-.demo-item img {
-  transition: transform, 0.25s ease-in-out;
-  width: 100%;
+.project-image-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
-.demo-item img:hover {
-  transform: scale(1.025);
-}
-
-.contact {
-  height: 80vh;
-  background: var(--tertiary-color);
-  color: var(--secondary-color);
+.project-content-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
+}
+
+.project:hover {
+  border: 1px solid var(--secondary-color);
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.project h3 {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.project p {
+  padding: 0 1rem 1rem;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.45rem;
+}
+
+.project button {
+  font-size: 1.25rem;
+  letter-spacing: 1.2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.project-stacks,
+.project-links {
+  width: 180px;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project i {
+  font-size: 2.25rem;
+}
+
+.project-links {
+  margin: 1rem auto 0;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-github,
+.project-live {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: var(--secondary-color);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.project-github:hover,
+.project-live:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 960px) {
-  .demo-title {
-    margin-top: 10%;
+  .projects-contents {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
   }
-  .demo-container {
-    grid-template-columns: repeat(2, 1fr);
+  .project-content-wrapper {
+    order: 1;
   }
-  .demo-item {
+  .project-image-wrapper {
+    order: 2;
+  }
+  .project {
+    width: 80%;
+    height: 100%;
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .project p {
     width: 75%;
-    height: auto;
+    font-size: 1.85rem;
   }
 }
 
 /* Contact section */
 .contact {
-  background-color: var(--primary-color);
+  height: 80vh;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact h1 {
@@ -472,7 +528,7 @@ footer {
 
 .footer-icons {
   display: flex;
-  width: 45vw;
+  width: 150px;
   justify-content: space-around;
 }
 
@@ -485,9 +541,6 @@ footer {
 }
 
 @media screen and (min-width: 650px) {
-  .footer-icons {
-    width: 30vw;
-  }
   .footer h3 {
     font-size: 2.25rem;
   }
