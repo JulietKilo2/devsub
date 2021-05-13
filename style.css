@@ -94,9 +94,8 @@ button {
   text-decoration: none;
   color: var(--secondary-color);
   transition: 0.3s ease-in-out;
-  padding: 0.75rem 1rem;
-  border-radius: 5px;
-  border: 0.5px solid transparent;
+  padding: 0.25rem 1rem;
+  border-bottom: 0.5px solid transparent;
 }
 
 .menu li:hover {
@@ -123,7 +122,7 @@ button {
   padding: 0.5rem;
 }
 .active li:hover {
-  border-radius: 0.5rem;
+  border-color: var(--primary-color);
 }
 
 /* Menu ends */
@@ -170,7 +169,9 @@ button {
 
 .intro-button:hover {
   background-color: var(--tertiary-color);
-  /* background-color: var(--primary-color); */
+  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 620px) {
@@ -192,8 +193,6 @@ button {
 
 /* About section */
 .about {
-  height: 100vh;
-  /* background: var(--tertiary-color); */
   color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -202,10 +201,10 @@ button {
 }
 
 .about-card {
-  margin: 0 auto;
+  margin: 8rem auto 0;
   padding: 2.5rem;
   width: 90%;
-  height: 65%;
+  height: 75%;
   border: 0.5px solid var(--secondary-color);
   border-radius: 5px;
   display: flex;
@@ -241,9 +240,9 @@ button {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.25s, ease-in-out;
   margin-top: 3rem;
   font-size: 2rem;
+  transition: all 250ms ease-in-out;
 }
 
 .about-button:hover {
@@ -277,7 +276,7 @@ button {
 @media screen and (min-width: 560px) {
   .about-card {
     width: 70%;
-    height: 65%;
+    height: 100%;
   }
   .about-card p {
     font-size: 2rem;
@@ -292,8 +291,8 @@ button {
 
 @media screen and (min-width: 1180px) {
   .about-card {
-    width: 50%;
-    height: 50%;
+    width: 62.5%;
+    height: 70%;
   }
 }
 
@@ -327,12 +326,11 @@ button {
   width: 90%;
   margin-top: 3rem;
   border: 1px solid transparent;
-  border-radius: 10px;
   padding: 1rem;
   line-height: 1.5;
-  transition: all 0.25s ease-in-out;
   display: flex;
   flex-direction: column;
+  transition: all 200ms ease-in-out;
 }
 
 .project-image-wrapper {
@@ -347,26 +345,32 @@ button {
   justify-content: center;
   align-items: center;
   flex: 1;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.75rem;
+  border-radius: 0 0 10px 10px;
 }
 
 .project:hover {
-  border: 1px solid var(--secondary-color);
+  transform: scale(1.05);
 }
 
 .project img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .project h3 {
   text-transform: capitalize;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .project p {
   padding: 0 1rem 1rem;
+  margin-top: 1rem;
   line-height: 1.5;
   text-align: center;
   font-size: 1.45rem;
@@ -374,8 +378,11 @@ button {
 
 .project button {
   font-size: 1.25rem;
+  font-weight: bold;
   letter-spacing: 1.2px;
   font-family: "Montserrat", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .project-stacks,
@@ -414,6 +421,7 @@ button {
 .project-live:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 @media screen and (min-width: 960px) {
@@ -425,10 +433,14 @@ button {
     align-items: center;
   }
   .project-content-wrapper {
+    border-radius: 10px 0 0 10px;
     order: 1;
   }
   .project-image-wrapper {
     order: 2;
+  }
+  .project img {
+    border-radius: 0 10px 10px 0;
   }
   .project {
     width: 80%;
