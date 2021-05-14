@@ -79,7 +79,21 @@ window.addEventListener('scroll', function () {
 data.forEach((item) => {
     // list out the stacks
     const stacks = item.stacks.map((stack) => {
-        return `<i class="fab fa-${stack}" ></i>`
+        // name for each stack
+        let name = stack;
+        // conditions
+        if (stack === 'css3-alt') {
+            name = 'css3'
+        }
+        if (stack === 'js') {
+            name = 'javascript'
+        }
+        return `
+        <div class="project-stacks-item">
+            <i class="fab fa-${stack}" ></i>
+            <p class="project-stacks-name">${name}</p>
+        </div>
+        `
     }).join('');
 
     // create innerHTML element for each project
@@ -94,20 +108,20 @@ data.forEach((item) => {
             <div class="project-stacks">
                 ${stacks}
             </div>
-            <div class="project-links">
-                <a href=${item.githubUrl} target="_blank">
-                        <button class="project-github">
-                            source
-                        </button>
-                </a>
-                    <a href=${item.liveUrl} target="_blank">
-                        <button class="project-live">
-                            live
-                        </button>
-                </a>
-            </div>
-        </div>
+    <div class="project-links">
+        <a href=${item.githubUrl} target="_blank">
+            <button class="project-github">
+                source
+            </button>
+        </a>
+        <a href=${item.liveUrl} target="_blank">
+            <button class="project-live">
+                live
+            </button>
+        </a>
     </div>
+        </div >
+    </div >
     `
 
     // Append the project to parent element
